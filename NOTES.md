@@ -2,7 +2,7 @@
 A person would be able to book an activity in the trip with other people or by him/herself. Theu should be able to get all the bookings (of activities) and delete them.
 
 ### Frontend
-- [Frontend Repo]https://github.com/wenxiao92/wenxiao92-phase-3-project-build-frontend
+- [Frontend Repo](https://github.com/wenxiao92/wenxiao92-phase-3-project-build-frontend)
 
 ### Features
 * List Activities
