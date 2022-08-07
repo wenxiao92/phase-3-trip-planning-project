@@ -4,7 +4,7 @@ class CreateBookings < ActiveRecord::Migration[6.1]
       t.integer :traveler_id
       t.integer :activity_id
       t.string :timeslot
-      t.integer :total_price
+      t.integer :activity_price
       t.timestamps
     end
   end
