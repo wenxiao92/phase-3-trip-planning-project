@@ -13,4 +13,5 @@ end
 use Rack::JSONBodyParser
 
 # Our application
+use ActivitiesController
 run ApplicationController
