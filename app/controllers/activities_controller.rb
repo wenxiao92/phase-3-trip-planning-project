@@ -5,4 +5,14 @@ class ActivitiesController < Sinatra::Base
         Activity.all.to_json
     end
 
+    get "/activities/:id" do
+       currentActivity = Activity.find_by_id(params[:id])
+       currentActivity.to_json 
+    end
+
+    get "/activities/:id/timeslots" do
+        currentActivity = Activity.find_by_id(params[:id])
+        currentActivity.activity_timeslot.split(',').to_json
+    end
+
 end
