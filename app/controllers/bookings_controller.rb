@@ -24,4 +24,16 @@ class BookingsController < ActivitiesController
       test.to_json
     end
 
+    post "/bookings" do
+    
+    booking = Booking.create(
+      booking_name: params[:booking_name],
+      traveler_id: params[:traveler_id],
+      activity_id: params[:activity_id],
+      timeslot: params[:timeslot]
+    )
+
+    booking.to_json
+    end
+
 end
