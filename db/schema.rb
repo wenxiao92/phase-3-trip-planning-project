@@ -14,7 +14,6 @@ ActiveRecord::Schema.define(version: 2022_08_10_023524) do
 
   create_table "activities", force: :cascade do |t|
     t.string "activity_name"
-    t.integer "price"
     t.string "activity_timeslot"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -24,7 +23,6 @@ ActiveRecord::Schema.define(version: 2022_08_10_023524) do
     t.integer "traveler_id"
     t.integer "activity_id"
     t.string "timeslot"
-    t.integer "activity_price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "booking_name"
