@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2022_08_10_023524) do
   end
 
   create_table "bookings", force: :cascade do |t|
-    t.integer "traveler_id"
+    t.string "traveler_id"
     t.integer "activity_id"
     t.string "timeslot"
     t.datetime "created_at", precision: 6, null: false
