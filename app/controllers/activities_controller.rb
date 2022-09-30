@@ -10,6 +10,11 @@ class ActivitiesController < Sinatra::Base
        currentActivity.to_json 
     end
 
+    get "/activities_name" do
+        currentActivity = Activity.all.map(&:activity_name)
+        currentActivity.to_json
+     end
+
     get "/activities/:id/bookings" do
         bookingsByActivity = Activity.find_by_id(params[:id])
         bookingsByActivity.bookings.to_json

@@ -18,14 +18,13 @@ class BookingsController < ActivitiesController
     # end
 
     get "/bookings/:activity_id" do
-      # test = Booking.find(params[:activity_id])
-      # test.to_json
-      test = Booking.where(activity_id: params[:activity_id])
-      test.to_json
+      bookingsBasedID = Booking.where(activity_id: params[:activity_id])
+      bookingsBasedID.to_json
     end
 
+  ##### POST
     post "/bookings" do
-    
+  
     booking = Booking.create(
       booking_name: params[:booking_name],
       traveler_id: params[:traveler_id],
@@ -36,4 +35,8 @@ class BookingsController < ActivitiesController
     booking.to_json
     end
 
+  ##### PATCH
+    patch "/bookings/:id" do
+
+    end
 end
