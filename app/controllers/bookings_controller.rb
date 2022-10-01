@@ -36,7 +36,13 @@ class BookingsController < ActivitiesController
     end
 
   ##### PATCH
-    patch "/bookings/:id" do
+    patch "/bookings/:id/edit" do
+      booking = Booking.find(params[:id])
+      booking.update(
+        booking_name: params[:booking_name],
+        traveler_id: params[:traveler_id]
+      )
 
+      booking.to_json
     end
 end
