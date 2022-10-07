@@ -45,4 +45,12 @@ class BookingsController < ActivitiesController
 
       booking.to_json
     end
+
+    ##### Delete
+    delete '/bookings/:id' do
+      booking = Booking.find(params[:id])
+      booking.destroy
+    end
+
+
 end
